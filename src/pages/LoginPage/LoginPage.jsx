@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const LoginPage = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
@@ -35,7 +36,7 @@ const LoginPage = () => {
     </div>
   </div>
 </div>
-  )
-}
+  );
+};
 
 export default LoginPage
