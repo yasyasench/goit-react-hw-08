@@ -1,0 +1,58 @@
+.header {
+    background-color: #2c2b2b;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
+
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle{
+    margin-left: 40px;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-align: left;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: uppercase;
+}
+
+.nav {
+    font-style: normal;
+    margin-left: auto;
+    margin-right: 40px;
+}
+
+.navlist {
+    display: flex;
+    gap: 40px;
+
+}
+
+.navitem {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+}
+
+.navitem:hover {
+    color: #404BBF;
+}
