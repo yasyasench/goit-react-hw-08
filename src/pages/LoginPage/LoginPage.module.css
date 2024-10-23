@@ -1,0 +1,95 @@
+.hero {
+    background-color: var(--color-base-200);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .heroContent {
+        flex-direction: row-reverse;
+    }
+}
+
+.textSection {
+    text-align: center;
+}
+
+@media (min-width: 1024px) {
+    .textSection {
+        text-align: left;
+    }
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.card {
+    width: 100%;
+    max-width: 24rem;
+    border-radius: 30px;
+        padding: 48px 28px;
+    
+     background-color: #f3f3f3;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formControl {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input {
+    border: 1px solid rgba(12, 12, 12, 0.15);
+    border-radius: 12px;
+    padding: 12px 14px;
+}
+
+.labelText {
+    font-size: 0.875rem;
+}
+
+.forgotPassword {
+    font-size: 0.75rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+
+.loginButton {
+        padding: 12px 50px;
+        color: #fbfbfb;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            border-radius: 16px;
+            background: #3350e9;
+            border: none;
+            outline: none;
+}
+
+.loginButton:hover {
+    background-color: #1f3cd4;
+}
