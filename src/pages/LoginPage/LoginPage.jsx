@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import css from "./LoginPage.module.css"
 import { Field, Form, Formik } from 'formik';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../redux/auth/operations';
+import { useNavigate } from 'react-router-dom';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import toast from 'react-hot-toast';
 
 const LoginPage = () => {
 
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   const initValues = {
     email:"",
@@ -15,10 +21,23 @@ const LoginPage = () => {
 
   const handleSubmit = (values, options) => { 
     console.log(values);
-    dispatch(login(values));
+    dispatch(login(values))
+      .unwrap()
+        .then(res => {
+        navigate("/contacts");
+      })
+      .catch((error) => {
+        console.error("Login error: ", error);
+        toast.error("incalid credentials");
+      });
+      
     options.resetForm();
 
   };
+
+  /*useEffect(() =>{
+    isLoggedIn && navigate("/contacts");
+  }, [isLoggedIn, navigate]);*/
 
   return (
     <div className={css.hero}>

@@ -8,13 +8,20 @@ import {
 } from '../../redux/contactsSlice';
 
 import Loader from '../Loader/Loader';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchContacts } from '../../redux/contactsOps';
 
 
 const ContactList = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   const contacts = useSelector(selectFilteredContacts);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <ul className={css.list}>

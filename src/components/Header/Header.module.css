@@ -11,22 +11,38 @@
 
 }
 
-.headerContainer {
-    display: flex;
-    align-items: center;
-}
-
-.headerTitle{
+.headerTitle {
     margin-left: 40px;
     color: #fff;
     font-family: "Roboto", sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        text-align: left;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.welcome {
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
 }
 
 .nav {
@@ -38,7 +54,10 @@
 .navlist {
     display: flex;
     gap: 40px;
-
+    justify-content: center;
+    /* Horizontally center items */
+    align-items: center;
+    /* Vertically center items */
 }
 
 .navitem {
@@ -48,11 +67,28 @@
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-align: left;
+    text-align: center;
+    /* Ensure text is centered inside the navitem */
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     text-transform: uppercase;
 }
 
 .navitem:hover {
     color: #404BBF;
+}
+
+.logoutBtn {
+    padding: 12px 12px;
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    border-radius: 16px;
+    background: #3350e9;
+    border: none;
+    outline: none;
+}
+
+.logoutBtn:hover {
+    background-color: #404BBF;
 }
