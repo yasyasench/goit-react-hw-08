@@ -8,6 +8,7 @@ const initialState = {
     },
     token: "",
     isLoggedIn: false,
+    isRefreshing: false,
 };
 
 const slice = createSlice({
@@ -26,6 +27,7 @@ const slice = createSlice({
                 state.isLoggedIn = true
             })
             .addCase(logout.fulfilled, () => initialState)
+            
             .addCase(refresh.pending, (state) => {
                 state.isRefreshing = true;
             })

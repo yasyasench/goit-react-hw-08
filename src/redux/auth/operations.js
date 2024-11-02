@@ -5,6 +5,8 @@ export const instanse = axios.create({
   baseURL: "https://connections-api.goit.global",
 });
 
+
+
 const setAuthHeader = token => {
   instanse.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
