@@ -1,6 +1,5 @@
 .hero {
-    background-color: var(--color-base-200);
-    min-height: 100vh;
+    margin-top: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,9 +39,9 @@
     width: 100%;
     max-width: 24rem;
     border-radius: 30px;
-        padding: 48px 28px;
-    
-     background-color: #f3f3f3;
+    padding: 48px 28px;
+
+    background-color: #f3f3f3;
 }
 
 .cardBody {
@@ -79,15 +78,15 @@
 
 
 .loginButton {
-        padding: 12px 50px;
-        color: #fbfbfb;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            border-radius: 16px;
-            background: #3350e9;
-            border: none;
-            outline: none;
+    padding: 12px 50px;
+    color: #fbfbfb;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 16px;
+    background: #3350e9;
+    border: none;
+    outline: none;
 }
 
 .loginButton:hover {

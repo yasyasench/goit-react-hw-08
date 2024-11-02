@@ -1,6 +1,6 @@
 import Contact from '../Contact/Contact';
-
 import css from './ContactList.module.css';
+
 import {
 	selectError,
 	selectFilteredContacts,
@@ -17,6 +17,7 @@ const ContactList = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   const contacts = useSelector(selectFilteredContacts);
+  
 
   const dispatch = useDispatch();
   useEffect(() => {

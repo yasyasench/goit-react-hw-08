@@ -1,0 +1,20 @@
+.authMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #2a363b;
+    text-transform: uppercase;
+}
+
+.active {
+    color: #1f3cd4;
+}

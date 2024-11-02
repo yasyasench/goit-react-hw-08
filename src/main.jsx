@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "modern-normalize";
 import "./css/index.css";
-
+import { HelmetProvider } from "react-helmet-async";
 import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store';
 import { BrowserRouter } from "react-router-dom";
@@ -14,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		<Provider store={store}>
 			
 			<BrowserRouter>
-				<App />
+				 <HelmetProvider>
+					<App />
+				</HelmetProvider>
 			</BrowserRouter>
 			
 		</Provider>
