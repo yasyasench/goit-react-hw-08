@@ -9,9 +9,8 @@ const setAuthHeader = token => {
   instanse.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
-// Clear the auth header
 const clearAuthHeader = () => {
-  delete instanse.defaults.headers.common.Authorization;
+   instanse.defaults.headers.common.Authorization = "";
 }
 
 // REGISTRATION
@@ -48,9 +47,29 @@ export const logout = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       await instanse.post("/users/logout");
-      clearAuthHeader(); // Clear the authorization header
+      clearAuthHeader(); 
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.status);
     }
   }
 );
+
+//CURRENT REQUEST
+
+export const refresh = createAsyncThunk("auth/refresh", async (_, thunkAPI) => {
+  const token = thunkAPI.getState().auth.token;
+
+  if (token === null) {
+    return thunkAPI.rejectWithValue("Unable to fetch user");
+  }
+
+  setAuthHeader(token);
+
+  try {
+    const { data } = await instanse.get("/users/current");
+
+    return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.response.status);
+  }
+});

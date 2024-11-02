@@ -10,12 +10,17 @@ import ContactsPage from './pages/ContactsPage/ContactsPage';
 import LoginPage from './pages/LoginPage/LoginPage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
 import { Toaster } from 'react-hot-toast';  
+import { refresh } from './redux/auth/operations';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());
+  }, [dispatch]);
+
+    useEffect(() => {
+    dispatch(refresh());
   }, [dispatch]);
 
   //APP//
@@ -35,3 +40,4 @@ const App = () => {
 }
 
 export default App;
+
