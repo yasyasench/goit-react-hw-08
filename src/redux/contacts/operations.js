@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { instanse } from "./auth/operations";
+import { instanse } from "../auth/operations";
 
 
 

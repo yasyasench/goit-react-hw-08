@@ -1,7 +1,7 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 import "./css/App.css";
 import { useDispatch } from 'react-redux';
-import { fetchContacts } from './redux/contactsOps';
+import { fetchContacts } from './redux/contacts/operations.js';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Layout from './components/Layout';
@@ -21,10 +21,6 @@ const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
   
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
-
   useEffect(() => {
     dispatch(refresh());
   }, [dispatch]);

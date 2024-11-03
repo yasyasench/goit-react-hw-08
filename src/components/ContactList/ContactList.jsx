@@ -3,14 +3,14 @@ import css from './ContactList.module.css';
 
 import {
 	selectError,
-	selectFilteredContacts,
 	selectLoading,
-} from '../../redux/contactsSlice';
+} from '../../redux/contacts/selectors';
 
 import Loader from '../Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from '../../redux/contactsOps';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { selectFilteredContacts } from '../../redux/filters/selectors';
 
 
 const ContactList = () => {
